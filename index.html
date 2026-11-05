@@ -354,10 +354,8 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
     <div class="about">
       <div class="photo">
         <div class="photo-in" id="photoBox">
-          <div class="ph"><b>SA</b>Your photo goes here</div>
+          <img src="images/profile.jpg" alt="Portrait of Salma Akter" width="972" height="1215">
         </div>
-        <label for="photoInput">Upload photo</label>
-        <input id="photoInput" type="file" accept="image/*" hidden>
       </div>
       <div class="about-text">
         <h3>I like questions that a spreadsheet <em>can actually answer</em>.</h3>
@@ -596,11 +594,6 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
       cb(c.toDataURL('image/jpeg',.82))};img.src=fr.result};fr.readAsDataURL(file);
   }
 
-  // profile photo
-  var pb=document.getElementById('photoBox'),pi=document.getElementById('photoInput');
-  function showPhoto(src){if(src)pb.innerHTML='<img alt="Portrait of Salma Akter" src="'+src+'">'}
-  showPhoto(load('pf-photo'));
-  pi.addEventListener('change',function(){shrink(pi.files[0],700,function(d){showPhoto(d);save('pf-photo',d)})});
 
   // project slots
   var colors=['var(--coral)','var(--sky)','var(--violet)','var(--pink)'];
