@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><script>if(location.hostname.indexOf("www.")===0)location.replace("https://salmaakter.me"+location.pathname+location.search+location.hash)</script><link rel="canonical" href="https://salmaakter.me/"><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Salma Akter Portfolio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Data Analyst and AI Automation Builder: five live projects in retail, automotive supply chain, banking risk and AI agents, built with Python, SQL and n8n.">
@@ -9,9 +9,9 @@
 /* Layout concept: a night-time "control room" — deep ink ground, each project lit by its own neon colour, data pulses flowing through an n8n-style node line into a dashboard. Dark-first single look, by choice. */
 :root{
   color-scheme: dark;
-  --ink:#0c0f24; --ink-2:#141838; --ink-3:#1c2150;
-  --line:rgba(214,214,255,.12); --fg:#f4f2ff; --muted:#a9abcc; --dim:#7477a0;
-  --coral:#ff6b6b; --sun:#ffc93c; --mint:#2ee6b6; --sky:#4cc9f0; --violet:#a47bff; --pink:#ff4fa3;
+  --ink:#0B1220; --ink-2:#111C31; --ink-3:#172540;
+  --line:rgba(148,163,184,.12); --fg:#E2E8F0; --muted:#A3B1C6; --dim:#6B7A93;
+  --coral:#2563EB; --sun:#22D3EE; --mint:#22D3EE; --sky:#60A5FA; --violet:#8B5CF6; --pink:#A78BFA;
   --display:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
   --body:"Figtree", "Segoe UI", system-ui, sans-serif;
   --mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
@@ -30,26 +30,27 @@ p{margin:0}
 .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .glow-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;
   background:
-   radial-gradient(40rem 30rem at 85% -5%, rgba(255,79,163,.18), transparent 60%),
-   radial-gradient(36rem 28rem at -10% 30%, rgba(46,230,182,.12), transparent 60%),
-   radial-gradient(40rem 30rem at 60% 110%, rgba(164,123,255,.16), transparent 60%),
+   radial-gradient(40rem 30rem at 85% -5%, rgba(139,92,246,.18), transparent 60%),
+   radial-gradient(36rem 28rem at -10% 30%, rgba(34,211,238,.12), transparent 60%),
+   radial-gradient(40rem 30rem at 60% 110%, rgba(139,92,246,.16), transparent 60%),
    var(--ink)}
 .grid-tex{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
   background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 0%,#000 20%,transparent 70%)}
 
 /* NAV */
-header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(12,15,36,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(11,18,32,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo i img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none}
-.logo i{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;font-style:normal;font-size:.95rem;color:var(--ink);
+.logo i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;overflow:hidden;padding:2px;font-style:normal;font-size:.95rem;color:var(--ink);
   background:conic-gradient(from 200deg,var(--coral),var(--sun),var(--mint),var(--sky),var(--violet),var(--pink),var(--coral))}
 .nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
 .nav ul a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem;transition:color .2s,background .2s}
 .nav ul a:hover,.nav ul a.on{color:var(--fg);background:rgba(255,255,255,.07)}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:var(--body);transition:transform .2s,box-shadow .2s,background .2s}
 .btn:hover{transform:translateY(-2px)}
-.btn-hot{background:linear-gradient(100deg,var(--pink),var(--coral) 55%,var(--sun));color:#1a0b1d;box-shadow:0 10px 30px -10px rgba(255,79,163,.7)}
+.btn-hot{background:linear-gradient(100deg,#2563EB,#8B5CF6);color:#fff;box-shadow:0 10px 30px -10px rgba(37,99,235,.75)}
 .btn-ghost{background:transparent;color:var(--fg);border-color:var(--line)}
 .btn-ghost:hover{border-color:var(--sky);color:var(--sky)}
 .menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--fg);border-radius:10px;padding:8px 12px;font:inherit;cursor:pointer}
@@ -63,9 +64,9 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backgroun
 /* HERO */
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-block:72px 56px}
 .hero-text{min-width:0}
-.status{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 10px;border-radius:999px;background:rgba(46,230,182,.1);border:1px solid rgba(46,230,182,.35);color:var(--mint);font-size:.85rem;font-weight:600}
-.status b{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 rgba(46,230,182,.6);animation:ping 2s infinite}
-@keyframes ping{70%{box-shadow:0 0 0 10px rgba(46,230,182,0)}100%{box-shadow:0 0 0 0 rgba(46,230,182,0)}}
+.status{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 10px;border-radius:999px;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.35);color:var(--mint);font-size:.85rem;font-weight:600}
+.status b{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 rgba(34,211,238,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(34,211,238,0)}100%{box-shadow:0 0 0 0 rgba(34,211,238,0)}}
 .hero h1{font-size:clamp(2.6rem,6.4vw,5rem);font-weight:800;letter-spacing:-.02em;margin-top:22px}
 .hero h1 .name{background:linear-gradient(95deg,var(--sun),var(--coral) 40%,var(--pink) 70%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
 .role{font-family:var(--display);font-size:clamp(1.25rem,2.4vw,1.7rem);font-weight:600;margin-top:16px;color:var(--muted)}
@@ -106,12 +107,12 @@ section.block{padding-block:96px 0}
 
 /* ABOUT */
 .about{display:grid;grid-template-columns:340px 1fr;gap:48px;align-items:start}
-.photo{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:26px;padding:4px;background:conic-gradient(from 140deg,var(--coral),var(--sun),var(--mint),var(--sky),var(--violet),var(--pink),var(--coral))}
+.photo{position:relative;aspect-ratio:1/1;width:100%;max-width:340px;border-radius:26px;padding:4px;background:conic-gradient(from 140deg,var(--coral),var(--sun),var(--mint),var(--sky),var(--violet),var(--pink),var(--coral))}
 .photo-in{width:100%;height:100%;border-radius:22px;background:var(--ink-2);display:grid;place-items:center;text-align:center;overflow:hidden;position:relative}
 .photo-in img{width:100%;height:100%;object-fit:cover}
 .photo-in .ph{padding:24px;color:var(--muted);font-size:.9rem}
 .photo-in .ph b{display:block;font-family:var(--display);font-size:4.5rem;line-height:1;color:var(--fg);margin-bottom:10px}
-.photo label{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:.78rem;font-weight:600;padding:7px 14px;border-radius:999px;background:rgba(12,15,36,.85);border:1px solid var(--line);cursor:pointer;white-space:nowrap}
+.photo label{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:.78rem;font-weight:600;padding:7px 14px;border-radius:999px;background:rgba(11,18,32,.85);border:1px solid var(--line);cursor:pointer;white-space:nowrap}
 .photo label:hover{border-color:var(--sun);color:var(--sun)}
 .about-text{min-width:0}
 .about-text h3{font-size:clamp(1.5rem,2.8vw,2.1rem);font-weight:700}
@@ -147,7 +148,7 @@ section.block{padding-block:96px 0}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
 .proj .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.btn-c{background:var(--c);color:#10122a}
+.btn-c{background:var(--c);color:var(--on,#0B1220)}
 .ask{margin-top:20px;padding:14px 16px;border-radius:12px;border:1px dashed var(--line);font-size:.88rem;color:var(--muted)}
 .ask b{color:var(--c)}
 @media (max-width:900px){.proj{grid-template-columns:1fr}.proj.flip .vis{order:0}.proj .info,.proj .vis{padding:24px}}
@@ -165,24 +166,24 @@ section.block{padding-block:96px 0}
 .wf{display:grid;gap:10px}
 .node{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:var(--ink);border:1px solid var(--line);transition:transform .25s,border-color .25s}
 .node:hover{transform:translateX(6px);border-color:var(--c)}
-.node .ic{flex:none;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-family:var(--mono);font-size:.75rem;font-weight:600;color:#10122a}
+.node .ic{flex:none;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-family:var(--mono);font-size:.75rem;font-weight:600;color:#0B1220}
 .node .t{font-weight:600;font-size:.95rem}
 .node .s{font-size:.8rem;color:var(--muted)}
 .node .t,.node .s{min-width:0}
 .conn{height:16px;margin-left:31px;border-left:2px dashed var(--line);position:relative}
 .conn::after{content:"";position:absolute;left:-5px;top:0;width:8px;height:8px;border-radius:50%;background:var(--c);animation:drop 1.6s linear infinite}
 @keyframes drop{from{top:-2px;opacity:1}to{top:14px;opacity:.2}}
-.node.gate{border-color:rgba(255,201,60,.5);background:rgba(255,201,60,.06)}
+.node.gate{border-color:rgba(34,211,238,.5);background:rgba(34,211,238,.06)}
 .sheetrow{margin-top:16px;overflow-x:auto;border-radius:12px;border:1px solid var(--line)}
 .sheetrow table{border-collapse:collapse;width:100%;font-family:var(--mono);font-size:.72rem;min-width:420px}
-.sheetrow th{background:rgba(46,230,182,.12);color:var(--mint);text-align:left;padding:8px 10px;font-weight:600}
+.sheetrow th{background:rgba(34,211,238,.12);color:var(--mint);text-align:left;padding:8px 10px;font-weight:600}
 .sheetrow td{padding:8px 10px;color:var(--dim);border-top:1px solid var(--line)}
 
 /* Retail dashboard visual */
 .dash{border-radius:16px;background:var(--ink);border:1px solid var(--line);overflow:hidden}
 .dtabs{display:flex;gap:2px;padding:8px;overflow-x:auto;border-bottom:1px solid var(--line)}
 .dtabs button{flex:none;font:600 .74rem var(--body);padding:7px 11px;border-radius:8px;border:0;background:transparent;color:var(--muted);cursor:pointer}
-.dtabs button.on{background:var(--c);color:#10122a}
+.dtabs button.on{background:var(--c);color:#0B1220}
 .dbody{padding:16px;min-height:250px}
 .dpane[hidden]{display:none}
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
@@ -215,9 +216,9 @@ section.block{padding-block:96px 0}
 .slots{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 @media (max-width:760px){.slots{grid-template-columns:1fr}}
 .slot{position:relative;border-radius:22px;min-width:0}
-.drop{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;min-height:260px;padding:28px;border-radius:22px;border:2px dashed rgba(214,214,255,.22);background:rgba(255,255,255,.02);cursor:pointer;transition:border-color .2s,background .2s,transform .2s}
+.drop{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;min-height:260px;padding:28px;border-radius:22px;border:2px dashed rgba(148,163,184,.22);background:rgba(255,255,255,.02);cursor:pointer;transition:border-color .2s,background .2s,transform .2s}
 .drop:hover,.drop.over{border-color:var(--c);background:color-mix(in srgb,var(--c) 8%,transparent);transform:translateY(-3px)}
-.drop .plus{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font-size:1.8rem;font-weight:300;color:#10122a;background:var(--c)}
+.drop .plus{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font-size:1.8rem;font-weight:300;color:#0B1220;background:var(--c)}
 .drop strong{font-family:var(--display);font-size:1.25rem}
 .drop p{color:var(--muted);font-size:.9rem;max-width:34ch}
 .drop .num{position:absolute;top:16px;left:18px;font-family:var(--mono);font-size:.72rem;color:var(--dim)}
@@ -253,7 +254,7 @@ section.block{padding-block:96px 0}
 
 /* CONTACT */
 .contact{margin-block:96px 0;border-radius:32px;padding:56px 40px;position:relative;overflow:hidden;
-  background:linear-gradient(120deg,rgba(255,79,163,.22),rgba(164,123,255,.18) 45%,rgba(76,201,240,.18)),var(--ink-2);border:1px solid var(--line);text-align:left}
+  background:linear-gradient(120deg,rgba(139,92,246,.22),rgba(139,92,246,.18) 45%,rgba(96,165,250,.18)),var(--ink-2);border:1px solid var(--line);text-align:left}
 .contact h2{font-size:clamp(2rem,5vw,3.6rem);font-weight:800;max-width:16ch}
 .contact p{color:var(--muted);margin-top:14px;max-width:52ch}
 .mailbox{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:28px}
@@ -270,7 +271,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
 
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#home"><i>SA</i>Salma Akter</a>
+    <a class="logo" href="#home"><i><img src="images/avatar.jpg" alt="" width="34" height="34"></i>Salma Akter</a>
     <nav aria-label="Main">
       <ul id="menu">
         <li><a href="#home" class="on">Home</a></li>
@@ -295,7 +296,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
       <p class="lead">I clean messy data, model it in SQL, and tell its story in live dashboards: retail sales, automotive supply chains, banking and insurance risk. I also build AI agents that clean data, audit websites and write the report for you.</p>
       <div class="ctas">
         <a class="btn btn-hot" href="#projects">See my projects &rarr;</a>
-        <a class="btn btn-ghost" href="https://github.com/sakter2618-maker" target="_blank" rel="noopener">GitHub profile</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/salma-akter-99773219sd" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
 
@@ -303,35 +304,35 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
       <div class="bar"><i style="background:var(--coral)"></i><i style="background:var(--sun)"></i><i style="background:var(--mint)"></i><span>workflow &rarr; dashboard</span></div>
       <svg viewBox="0 0 460 300" role="img" aria-label="Data flows from a trigger through an API call and a Google Sheet into a bar chart">
         <defs>
-          <linearGradient id="flowGrad" x1="0" x2="1"><stop offset="0" stop-color="#ffc93c"/><stop offset=".5" stop-color="#ff4fa3"/><stop offset="1" stop-color="#4cc9f0"/></linearGradient>
+          <linearGradient id="flowGrad" x1="0" x2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset=".5" stop-color="#A78BFA"/><stop offset="1" stop-color="#60A5FA"/></linearGradient>
         </defs>
         <path id="fp" class="flow-line" d="M60 60 C 120 60, 120 60, 170 60 S 260 60, 290 60 C 340 60, 340 150, 230 150 S 100 150, 70 200"/>
         <!-- nodes -->
         <g font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">
-          <rect x="22" y="38" width="76" height="44" rx="10" fill="#0c0f24" stroke="#ffc93c"/>
-          <text x="60" y="58" text-anchor="middle" fill="#ffc93c">SCHEDULE</text><text x="60" y="71" text-anchor="middle" fill="#7477a0">weekly</text>
-          <rect x="132" y="38" width="76" height="44" rx="10" fill="#0c0f24" stroke="#ff4fa3"/>
-          <text x="170" y="58" text-anchor="middle" fill="#ff4fa3">PAGESPEED</text><text x="170" y="71" text-anchor="middle" fill="#7477a0">API call</text>
-          <rect x="252" y="38" width="76" height="44" rx="10" fill="#0c0f24" stroke="#2ee6b6"/>
-          <text x="290" y="58" text-anchor="middle" fill="#2ee6b6">SHEETS</text><text x="290" y="71" text-anchor="middle" fill="#7477a0">append row</text>
-          <rect x="190" y="128" width="84" height="44" rx="10" fill="#0c0f24" stroke="#a47bff"/>
-          <text x="232" y="148" text-anchor="middle" fill="#a47bff">SQL MODEL</text><text x="232" y="161" text-anchor="middle" fill="#7477a0">clean + join</text>
+          <rect x="22" y="38" width="76" height="44" rx="10" fill="#0B1220" stroke="#22D3EE"/>
+          <text x="60" y="58" text-anchor="middle" fill="#22D3EE">SCHEDULE</text><text x="60" y="71" text-anchor="middle" fill="#6B7A93">weekly</text>
+          <rect x="132" y="38" width="76" height="44" rx="10" fill="#0B1220" stroke="#A78BFA"/>
+          <text x="170" y="58" text-anchor="middle" fill="#A78BFA">PAGESPEED</text><text x="170" y="71" text-anchor="middle" fill="#6B7A93">API call</text>
+          <rect x="252" y="38" width="76" height="44" rx="10" fill="#0B1220" stroke="#22D3EE"/>
+          <text x="290" y="58" text-anchor="middle" fill="#22D3EE">SHEETS</text><text x="290" y="71" text-anchor="middle" fill="#6B7A93">append row</text>
+          <rect x="190" y="128" width="84" height="44" rx="10" fill="#0B1220" stroke="#8B5CF6"/>
+          <text x="232" y="148" text-anchor="middle" fill="#8B5CF6">SQL MODEL</text><text x="232" y="161" text-anchor="middle" fill="#6B7A93">clean + join</text>
         </g>
-        <circle r="6" fill="#ffc93c" class="pulse" style="offset-path:path('M60 60 C 120 60, 120 60, 170 60 S 260 60, 290 60 C 340 60, 340 150, 230 150 S 100 150, 70 200')"/>
-        <circle r="5" fill="#4cc9f0" class="pulse" style="offset-path:path('M60 60 C 120 60, 120 60, 170 60 S 260 60, 290 60 C 340 60, 340 150, 230 150 S 100 150, 70 200');animation-delay:-1.6s"/>
+        <circle r="6" fill="#22D3EE" class="pulse" style="offset-path:path('M60 60 C 120 60, 120 60, 170 60 S 260 60, 290 60 C 340 60, 340 150, 230 150 S 100 150, 70 200')"/>
+        <circle r="5" fill="#60A5FA" class="pulse" style="offset-path:path('M60 60 C 120 60, 120 60, 170 60 S 260 60, 290 60 C 340 60, 340 150, 230 150 S 100 150, 70 200');animation-delay:-1.6s"/>
         <!-- dashboard -->
-        <rect x="22" y="196" width="416" height="92" rx="14" fill="#0c0f24" stroke="rgba(214,214,255,.15)"/>
+        <rect x="22" y="196" width="416" height="92" rx="14" fill="#0B1220" stroke="rgba(148,163,184,.15)"/>
         <g>
-          <rect class="barg" x="44" y="236" width="26" height="40" rx="5" fill="#ffc93c"/>
-          <rect class="barg" x="80" y="222" width="26" height="54" rx="5" fill="#ff6b6b" style="animation-delay:.3s"/>
-          <rect class="barg" x="116" y="244" width="26" height="32" rx="5" fill="#ff4fa3" style="animation-delay:.6s"/>
-          <rect class="barg" x="152" y="214" width="26" height="62" rx="5" fill="#a47bff" style="animation-delay:.9s"/>
-          <rect class="barg" x="188" y="228" width="26" height="48" rx="5" fill="#4cc9f0" style="animation-delay:1.2s"/>
-          <rect class="barg" x="224" y="208" width="26" height="68" rx="5" fill="#2ee6b6" style="animation-delay:1.5s"/>
+          <rect class="barg" x="44" y="236" width="26" height="40" rx="5" fill="#22D3EE"/>
+          <rect class="barg" x="80" y="222" width="26" height="54" rx="5" fill="#2563EB" style="animation-delay:.3s"/>
+          <rect class="barg" x="116" y="244" width="26" height="32" rx="5" fill="#A78BFA" style="animation-delay:.6s"/>
+          <rect class="barg" x="152" y="214" width="26" height="62" rx="5" fill="#8B5CF6" style="animation-delay:.9s"/>
+          <rect class="barg" x="188" y="228" width="26" height="48" rx="5" fill="#60A5FA" style="animation-delay:1.2s"/>
+          <rect class="barg" x="224" y="208" width="26" height="68" rx="5" fill="#22D3EE" style="animation-delay:1.5s"/>
         </g>
-        <polyline points="280,262 310,248 340,252 370,230 400,220 420,212" fill="none" stroke="#4cc9f0" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="420" cy="212" r="4.5" fill="#4cc9f0"/>
-        <text x="280" y="282" font-family="JetBrains Mono, monospace" font-size="9" fill="#7477a0">sales trend</text>
+        <polyline points="280,262 310,248 340,252 370,230 400,220 420,212" fill="none" stroke="#60A5FA" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="420" cy="212" r="4.5" fill="#60A5FA"/>
+        <text x="280" y="282" font-family="JetBrains Mono, monospace" font-size="9" fill="#6B7A93">sales trend</text>
       </svg>
       <span class="float-tag a">SELECT region, SUM(sales)</span>
       <span class="float-tag b">✓ report sent</span>
@@ -354,7 +355,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
     <div class="about">
       <div class="photo">
         <div class="photo-in" id="photoBox">
-          <img src="images/profile.jpg" alt="Portrait of Salma Akter" width="972" height="1215">
+          <img src="images/profile.jpg" alt="Portrait of Salma Akter" width="640" height="640">
         </div>
       </div>
       <div class="about-text">
@@ -381,10 +382,10 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
 
 <section class="block" id="projects">
   <div class="wrap">
-    <div class="head"><div><div class="eyebrow">Selected work</div><h2>Projects</h2></div><p>Five end-to-end projects: three live dashboards and two AI agents, each with code on GitHub.</p></div>
+    <div class="head"><div><div class="eyebrow">Selected work</div><h2>Projects</h2></div><p>Five end-to-end projects: three live dashboards and two AI agents, each one you can open and try.</p></div>
 
     <!-- Retail -->
-    <article class="proj" style="--c:var(--sun);--tint:rgba(255,201,60,.22)">
+    <article class="proj" style="--c:#22D3EE;--tint:rgba(34,211,238,.2)">
       <div class="vis">
         <figure class="shot"><img src="images/retail.jpg" alt="Retail & E-commerce Sales Analytics dashboard — Executive Overview page"><figcaption>Live Streamlit dashboard · Executive Overview</figcaption></figure>
       </div>
@@ -408,14 +409,13 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
         <h5>Tools</h5>
         <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">Plotly</span><span class="chip">Streamlit</span><span class="chip">PostgreSQL</span><span class="chip">SQL</span><span class="chip">Excel</span></div>
         <div class="links">
-          <a class="btn btn-c" href="https://github.com/sakter2618-maker/retail-sales-analytics" target="_blank" rel="noopener">View code on GitHub</a>
-          <a class="btn btn-ghost" id="liveDash" href="https://retail-sales-analytics-9hmxelrt8quhekpdjudupp.streamlit.app/" target="_blank" rel="noopener">Open live dashboard</a>
+                    <a class="btn btn-c" href="/retail/" target="_blank" rel="noopener">View dashboard &rarr;</a>
         </div>
       </div>
     </article>
 
     <!-- SEO agent -->
-    <article class="proj flip" style="--c:var(--mint);--tint:rgba(46,230,182,.2)">
+    <article class="proj flip" style="--c:#8B5CF6;--on:#fff;--tint:rgba(139,92,246,.24)">
       <div class="vis">
         <figure class="shot"><img src="images/seo_agent.jpg" alt="n8n workflow of the SEO Growth Agent — weekly Search Console email report"><figcaption>Real n8n workflow running on my VPS</figcaption></figure>
       </div>
@@ -434,14 +434,13 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
         <h5>Tools</h5>
         <div class="chips"><span class="chip">n8n</span><span class="chip">PageSpeed Insights API</span><span class="chip">Google Sheets</span><span class="chip">Gmail</span><span class="chip">GitHub</span><span class="chip">VPS hosting</span></div>
         <div class="links">
-          <a class="btn btn-c" href="https://github.com/sakter2618-maker/n8n-seo-growth-agent" target="_blank" rel="noopener">View on GitHub</a>
-          <a class="btn btn-ghost" href="https://sakter2618-maker.github.io/sutokotha/" target="_blank" rel="noopener">See the demo store</a>
+                    <a class="btn btn-c" href="/seo-demo/" target="_blank" rel="noopener">View demo store &rarr;</a>
         </div>
       </div>
     </article>
 
     <!-- Automotive -->
-    <article class="proj" style="--c:var(--sky);--tint:rgba(76,201,240,.22)">
+    <article class="proj" style="--c:#3B82F6;--on:#fff;--tint:rgba(37,99,235,.26)">
       <div class="vis">
         <figure class="shot"><img src="images/automotive.jpg" alt="Automotive Supply Chain & Quality Analytics dashboard — Executive Overview"><figcaption>Live Streamlit dashboard · Executive Overview</figcaption></figure>
       </div>
@@ -463,14 +462,13 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
         <h5>Tools</h5>
         <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">PostgreSQL</span><span class="chip">Streamlit</span><span class="chip">Plotly</span><span class="chip">Excel</span><span class="chip">SPC</span></div>
         <div class="links">
-          <a class="btn btn-c" href="https://automotive-supply-chain-analytics-73hqvavck5c9qvzqkd9uxz.streamlit.app/" target="_blank" rel="noopener">Open live dashboard</a>
-          <a class="btn btn-ghost" href="https://github.com/sakter2618-maker/automotive-supply-chain-analytics" target="_blank" rel="noopener">View code on GitHub</a>
-        </div>
+          <a class="btn btn-c" href="/automotive/" target="_blank" rel="noopener">View dashboard &rarr;</a>
+                  </div>
       </div>
     </article>
 
     <!-- Banking -->
-    <article class="proj flip" style="--c:var(--violet);--tint:rgba(164,123,255,.24)">
+    <article class="proj flip" style="--c:#22D3EE;--tint:rgba(34,211,238,.2)">
       <div class="vis">
         <figure class="shot"><img src="images/banking.jpg" alt="Financial Risk Dashboard — Loan Default page"><figcaption>Live Streamlit dashboard · Loan Default</figcaption></figure>
       </div>
@@ -493,14 +491,13 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
         <h5>Tools</h5>
         <div class="chips"><span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">SQL</span><span class="chip">Streamlit</span><span class="chip">Plotly</span><span class="chip">Excel</span></div>
         <div class="links">
-          <a class="btn btn-c" href="https://banking-insurance-risk-analytics-n8ewtoj6bqh8zapprspo88a.streamlit.app/" target="_blank" rel="noopener">Open live dashboard</a>
-          <a class="btn btn-ghost" href="https://github.com/sakter2618-maker/banking-insurance-risk-analytics" target="_blank" rel="noopener">View code on GitHub</a>
-        </div>
+          <a class="btn btn-c" href="/banking/" target="_blank" rel="noopener">View dashboard &rarr;</a>
+                  </div>
       </div>
     </article>
 
     <!-- AI Data Analyst Agent -->
-    <article class="proj" style="--c:var(--pink);--tint:rgba(255,79,163,.22)">
+    <article class="proj" style="--c:#8B5CF6;--on:#fff;--tint:rgba(139,92,246,.24)">
       <div class="vis">
         <figure class="shot"><img src="images/ai_agent.jpg" alt="AI Data Analyst Agent web app — answering a question with SQL and a chart"><figcaption>The agent's web app answering a question</figcaption></figure>
       </div>
@@ -520,10 +517,6 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
       </div>
     </article>
 
-    <!-- Upcoming slots -->
-    <div class="head" style="margin-top:72px"><div><div class="eyebrow">Next up</div><h2 style="font-size:clamp(1.6rem,3.4vw,2.4rem)">Room for the next one</h2></div><p>Drop a screenshot onto a card, or click it, to add a new project.</p></div>
-    <div class="slots" id="slots"></div>
-    <p class="note">Projects you add here are saved in this browser only, as a preview. Send the details to Claude to make them permanent on the live site.</p>
   </div>
 </section>
 
@@ -546,7 +539,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
     <div class="mailbox">
       <span class="mail" id="mail">sakter2618@gmail.com</span>
       <button class="btn btn-hot" id="copyMail" type="button">Copy email</button>
-      <a class="btn btn-ghost" href="https://github.com/sakter2618-maker" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" href="https://linkedin.com/in/salma-akter-99773219sd" target="_blank" rel="noopener">LinkedIn</a>
       <span class="copied" id="copied" hidden>Copied</span>
     </div>
   </section>
@@ -581,82 +574,6 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
   });
   document.getElementById('yr').textContent=new Date().getFullYear();
 
-  // storage helpers
-  function load(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}
-  function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
-
-  // image shrink
-  function shrink(file,max,cb){
-    if(!file||!/^image\//.test(file.type))return;
-    var fr=new FileReader();fr.onload=function(){var img=new Image();img.onload=function(){
-      var s=Math.min(1,max/Math.max(img.width,img.height)),c=document.createElement('canvas');
-      c.width=Math.round(img.width*s);c.height=Math.round(img.height*s);c.getContext('2d').drawImage(img,0,0,c.width,c.height);
-      cb(c.toDataURL('image/jpeg',.82))};img.src=fr.result};fr.readAsDataURL(file);
-  }
-
-
-  // project slots
-  var colors=['var(--coral)','var(--sky)','var(--violet)','var(--pink)'];
-  var KEY='pf-slots-v1',slots=load(KEY)||[null,null],editing=-1,draft=null,confirmDel=-1;
-  var box=document.getElementById('slots');
-  function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-  function safeUrl(u){u=String(u||'').trim();return /^https?:\/\//i.test(u)?u:''}
-  function render(){
-    box.innerHTML='';
-    slots.forEach(function(s,i){
-      var d=document.createElement('div');d.className='slot';d.style.setProperty('--c',colors[i]);
-      if(editing===i){
-        var v=draft;
-        d.innerHTML='<form class="editor" id="ed'+i+'">'+
-          '<div class="thumb" id="th'+i+'" tabindex="0">'+(v.img?'<img alt="" src="'+v.img+'">':'Click or drop a screenshot')+'</div>'+
-          '<input type="file" id="fi'+i+'" accept="image/*" hidden>'+
-          '<label for="t'+i+'">Project title<input id="t'+i+'" required value="'+esc(v.title)+'" placeholder="e.g. Customer Churn Analysis"></label>'+
-          '<label for="d'+i+'">Short description<textarea id="d'+i+'" placeholder="What problem did it solve? What did you build?">'+esc(v.desc)+'</textarea></label>'+
-          '<label for="k'+i+'">Tools (comma separated)<input id="k'+i+'" value="'+esc(v.tools)+'" placeholder="Python, SQL, Excel"></label>'+
-          '<label for="l'+i+'">Link (GitHub or live demo)<input id="l'+i+'" type="url" value="'+esc(v.link)+'" placeholder="https://github.com/..."></label>'+
-          '<div class="row-btns"><button class="btn btn-hot btn-sm" type="submit">Save project</button><button class="btn btn-ghost btn-sm" type="button" data-cancel>Cancel</button></div></form>';
-        box.appendChild(d);
-        var th=d.querySelector('#th'+i),fi=d.querySelector('#fi'+i);
-        function setImg(f){shrink(f,900,function(u){draft.img=u;th.innerHTML='<img alt="" src="'+u+'">'})}
-        th.addEventListener('click',function(){fi.click()});
-        th.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();fi.click()}});
-        fi.addEventListener('change',function(){setImg(fi.files[0])});
-        th.addEventListener('dragover',function(e){e.preventDefault()});
-        th.addEventListener('drop',function(e){e.preventDefault();setImg(e.dataTransfer.files[0])});
-        d.querySelector('[data-cancel]').addEventListener('click',function(){editing=-1;render()});
-        d.querySelector('form').addEventListener('submit',function(e){e.preventDefault();
-          draft.title=d.querySelector('#t'+i).value.trim();draft.desc=d.querySelector('#d'+i).value.trim();
-          draft.tools=d.querySelector('#k'+i).value.trim();draft.link=d.querySelector('#l'+i).value.trim();
-          slots[i]=draft;editing=-1;
-          if(!save(KEY,slots)){slots[i].img='';save(KEY,slots)}
-          render()});
-        setTimeout(function(){var t=d.querySelector('#t'+i);if(t)t.focus()},0);
-      }else if(s){
-        var tools=(s.tools||'').split(',').map(function(x){return x.trim()}).filter(Boolean);
-        var link=safeUrl(s.link);
-        d.innerHTML='<div class="filled"><div class="cover">'+(s.img?'<img alt="Screenshot of '+esc(s.title)+'" src="'+s.img+'">':'<span>'+esc((s.title||'?').charAt(0))+'</span>')+'</div>'+
-          '<div class="bd"><h3>'+esc(s.title)+'</h3>'+(s.desc?'<p>'+esc(s.desc)+'</p>':'')+
-          (tools.length?'<div class="chips">'+tools.map(function(t){return'<span class="chip">'+esc(t)+'</span>'}).join('')+'</div>':'')+
-          '<div class="row-btns">'+(link?'<a class="btn btn-c btn-sm" style="--c:'+colors[i]+'" href="'+esc(link)+'" target="_blank" rel="noopener">Open project</a>':'')+
-          '<button class="btn btn-ghost btn-sm" type="button" data-edit>Edit</button>'+
-          '<button class="btn btn-ghost btn-sm" type="button" data-del>'+(confirmDel===i?'Click again to remove':'Remove')+'</button></div></div></div>';
-        box.appendChild(d);
-        d.querySelector('[data-edit]').addEventListener('click',function(){editing=i;draft=Object.assign({},s);confirmDel=-1;render()});
-        d.querySelector('[data-del]').addEventListener('click',function(){if(confirmDel===i){slots[i]=null;confirmDel=-1;save(KEY,slots)}else confirmDel=i;render()});
-      }else{
-        d.innerHTML='<div class="drop" tabindex="0" role="button" aria-label="Add project '+(i+6)+'"><span class="num">PROJECT 0'+(i+6)+'</span><span class="plus">+</span><strong>Add a project</strong><p>Drag a screenshot here, or click to add a title, description, tools and link.</p></div>';
-        box.appendChild(d);
-        var dr=d.querySelector('.drop');
-        function open(f){editing=i;draft={title:'',desc:'',tools:'',link:'',img:''};confirmDel=-1;render();if(f)shrink(f,900,function(u){draft.img=u;var th=document.getElementById('th'+i);if(th)th.innerHTML='<img alt="" src="'+u+'">'})}
-        dr.addEventListener('click',function(){open()});
-        dr.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
-        dr.addEventListener('dragover',function(e){e.preventDefault();dr.classList.add('over')});
-        dr.addEventListener('dragleave',function(){dr.classList.remove('over')});
-        dr.addEventListener('drop',function(e){e.preventDefault();open(e.dataTransfer.files[0])});
-      }
-    });
-  }
-  render();
 })();
 </script>
 
