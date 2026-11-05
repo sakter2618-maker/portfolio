@@ -19,7 +19,8 @@ header{flex:0 0 auto;height:52px;display:flex;align-items:center;gap:14px;paddin
 .back:hover{border-color:var(--c);color:var(--c)}
 main{flex:1;position:relative}
 .wait{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:.95rem;text-align:center;padding:16px}
-iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent}
+iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff;opacity:0;transition:opacity .3s}
+iframe.ready{opacity:1}
 @media (max-width:640px){.me span{display:none}.back{font-size:0;padding:7px 10px}.back::after{content:"\2190  Back";font-size:.85rem}}
 </style></head>
 <body>
@@ -30,6 +31,6 @@ iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:tran
 </header>
 <main>
   <div class="wait">Loading the live dashboard&hellip; it can take a few seconds if it has been asleep.</div>
-  <iframe src="https://automotive-supply-chain-analytics-73hqvavck5c9qvzqkd9uxz.streamlit.app/?embed=true" title="Automotive Supply Chain &amp; Quality Analytics" allow="clipboard-write; fullscreen"></iframe>
+  <iframe onload="this.classList.add('ready')" src="https://automotive-supply-chain-analytics-73hqvavck5c9qvzqkd9uxz.streamlit.app/?embed=true" title="Automotive Supply Chain &amp; Quality Analytics" allow="clipboard-write; fullscreen"></iframe>
 </main>
 </body></html>
