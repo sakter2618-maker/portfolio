@@ -152,6 +152,15 @@ section.block{padding-block:96px 0}
 .ask b{color:var(--c)}
 @media (max-width:900px){.proj{grid-template-columns:1fr}.proj.flip .vis{order:0}.proj .info,.proj .vis{padding:24px}}
 
+
+/* real project screenshots */
+.proj .vis{padding:24px}
+.shot{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 24px 50px -24px rgba(0,0,0,.7);transition:transform .3s}
+.shot:hover{transform:translateY(-4px) scale(1.01)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{background:var(--ink);color:var(--muted);font-family:var(--mono);font-size:.72rem;padding:9px 12px;border-top:1px solid var(--line)}
+.shot figcaption::before{content:"● ";color:var(--c)}
+
 /* SEO workflow visual */
 .wf{display:grid;gap:10px}
 .node{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:var(--ink);border:1px solid var(--line);transition:transform .25s,border-color .25s}
@@ -379,43 +388,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
     <!-- Retail -->
     <article class="proj" style="--c:var(--sun);--tint:rgba(255,201,60,.22)">
       <div class="vis">
-        <div class="dash">
-          <div class="dtabs" role="tablist" aria-label="Dashboard pages">
-            <button class="on" data-p="0" role="tab" aria-selected="true">Executive Overview</button>
-            <button data-p="1" role="tab" aria-selected="false">Sales Trend</button>
-            <button data-p="2" role="tab" aria-selected="false">Product &amp; Category</button>
-            <button data-p="3" role="tab" aria-selected="false">Customers</button>
-            <button data-p="4" role="tab" aria-selected="false">Profit &amp; Recs</button>
-          </div>
-          <div class="dbody">
-            <div class="dpane" data-p="0">
-              <div class="kpis">
-                <div class="kpi" style="--k:var(--sun)"><small>Net sales</small><strong>2.99M</strong></div>
-                <div class="kpi" style="--k:var(--mint)"><small>Est. profit</small><strong>758K</strong></div>
-                <div class="kpi" style="--k:var(--pink)"><small>Valid orders</small><strong>42,696</strong></div>
-                <div class="kpi" style="--k:var(--sky)"><small>Avg order</small><strong>69.99</strong></div>
-              </div>
-              <div class="ch" id="chSales" aria-label="Monthly net sales, Jan 2024 to Jun 2026"></div>
-            </div>
-            <div class="dpane" data-p="1" hidden>
-              <div class="callout"><b>&minus;33%</b> valid orders, Feb&ndash;Jun 2026 vs the same months of 2025. Order value stayed flat.</div>
-              <div class="ch" id="chOrders" aria-label="Monthly valid orders"></div>
-            </div>
-            <div class="dpane" data-p="2" hidden>
-              <div class="callout"><b>Electronics</b> brings 51% of sales but has the lowest margin.</div>
-              <div class="ch" id="chCat" aria-label="Net sales and margin by category"></div>
-            </div>
-            <div class="dpane" data-p="3" hidden>
-              <div class="callout"><b>9,858</b> customers grouped by RFM score (recency, frequency, money).</div>
-              <div class="ch" id="chRfm" aria-label="Customers per RFM segment"></div>
-            </div>
-            <div class="dpane" data-p="4" hidden>
-              <div class="callout"><b>31% &rarr; 1%</b> margin as discounts rise past 20%. Cap discounts at 15&ndash;20%.</div>
-              <div class="ch" id="chDisc" aria-label="Profit margin by discount band"></div>
-            </div>
-          </div>
-        </div>
-        <div class="illus">Real figures from the project's cleaned data (49,830 order lines). Click the tabs.</div>
+        <figure class="shot"><img src="images/retail.jpg" alt="Retail & E-commerce Sales Analytics dashboard — Executive Overview page"><figcaption>Live Streamlit dashboard · Executive Overview</figcaption></figure>
       </div>
       <div class="info">
         <span class="tagline">Data analytics · Python · SQL</span>
@@ -446,19 +419,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
     <!-- SEO agent -->
     <article class="proj flip" style="--c:var(--mint);--tint:rgba(46,230,182,.2)">
       <div class="vis">
-        <div class="wf">
-          <div class="node"><span class="ic" style="background:var(--sun)">⏱</span><div><div class="t">Daily schedule</div><div class="s">Runs by itself every day, no manual start</div></div></div>
-          <div class="conn"></div>
-          <div class="node"><span class="ic" style="background:var(--sky)">URL</span><div><div class="t">Validate the site</div><div class="s">Any authorized site, one setting to change</div></div></div>
-          <div class="conn"></div>
-          <div class="node"><span class="ic" style="background:var(--pink)">API</span><div><div class="t">Audit SEO &amp; speed</div><div class="s">PageSpeed scores, sitemap, page-level findings</div></div></div>
-          <div class="conn"></div>
-          <div class="node"><span class="ic" style="background:var(--mint)">▦</span><div><div class="t">Save to Google Sheets</div><div class="s">Every finding with the URLs it affects</div></div></div>
-          <div class="conn"></div>
-          <div class="node"><span class="ic" style="background:var(--violet)">@</span><div><div class="t">Weekly email report</div><div class="s">A summary lands in the inbox every week</div></div></div>
-          <div class="conn"></div>
-          <div class="node gate"><span class="ic" style="background:var(--sun)">✋</span><div><div class="t">Fix as a pull request</div><div class="s">A human reviews and approves before anything goes live</div></div></div>
-        </div>
+        <figure class="shot"><img src="images/seo_agent.jpg" alt="n8n workflow of the SEO Growth Agent — weekly Search Console email report"><figcaption>Real n8n workflow running on my VPS</figcaption></figure>
       </div>
       <div class="info">
         <span class="tagline">AI automation · n8n</span>
@@ -484,18 +445,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
     <!-- Automotive -->
     <article class="proj" style="--c:var(--sky);--tint:rgba(76,201,240,.22)">
       <div class="vis">
-        <div class="dash">
-          <div class="dbody">
-            <div class="kpis">
-              <div class="kpi" style="--k:var(--sky)"><small>Deliveries</small><strong>3,420</strong></div>
-              <div class="kpi" style="--k:var(--coral)"><small>On-time</small><strong>83.8%</strong></div>
-              <div class="kpi" style="--k:var(--pink)"><small>Defect PPM</small><strong>8,663</strong></div>
-              <div class="kpi" style="--k:var(--sun)"><small>Units lost</small><strong>30.6K</strong></div>
-            </div>
-            <div class="ch" id="chOtd" aria-label="On-time delivery percentage by supplier"></div>
-          </div>
-        </div>
-        <div class="illus">On-time delivery by supplier (target 95%). Real figures from the project.</div>
+        <figure class="shot"><img src="images/automotive.jpg" alt="Automotive Supply Chain & Quality Analytics dashboard — Executive Overview"><figcaption>Live Streamlit dashboard · Executive Overview</figcaption></figure>
       </div>
       <div class="info">
         <span class="tagline">Supply chain · BI · SQL</span>
@@ -524,18 +474,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
     <!-- Banking -->
     <article class="proj flip" style="--c:var(--violet);--tint:rgba(164,123,255,.24)">
       <div class="vis">
-        <div class="dash">
-          <div class="dbody">
-            <div class="kpis">
-              <div class="kpi" style="--k:var(--violet)"><small>Loans</small><strong>15K</strong></div>
-              <div class="kpi" style="--k:var(--coral)"><small>Default rate</small><strong>12.3%</strong></div>
-              <div class="kpi" style="--k:var(--sun)"><small>Flagged txns</small><strong>2,071</strong></div>
-              <div class="kpi" style="--k:var(--mint)"><small>Model AUC</small><strong>0.71</strong></div>
-            </div>
-            <div class="ch" id="chDefault" aria-label="Loan default rate by customer group"></div>
-          </div>
-        </div>
-        <div class="illus">Loan default rate by customer group. Loan and claim data are synthetic, linked to real customers.</div>
+        <figure class="shot"><img src="images/banking.jpg" alt="Financial Risk Dashboard — Loan Default page"><figcaption>Live Streamlit dashboard · Loan Default</figcaption></figure>
       </div>
       <div class="info">
         <span class="tagline">Finance · Risk · Machine learning</span>
@@ -565,17 +504,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
     <!-- AI Data Analyst Agent -->
     <article class="proj" style="--c:var(--pink);--tint:rgba(255,79,163,.22)">
       <div class="vis">
-        <div class="wf">
-          <div class="node"><span class="ic" style="background:var(--sky)">CSV</span><div><div class="t">Upload any CSV or Excel</div><div class="s">Every sheet becomes a table</div></div></div>
-          <div class="conn"></div>
-          <div class="node"><span class="ic" style="background:var(--sun)">✓</span><div><div class="t">Clean &amp; score quality</div><div class="s">8 explainable steps, score before and after</div></div></div>
-          <div class="conn"></div>
-          <div class="node"><span class="ic" style="background:var(--violet)">SQL</span><div><div class="t">Ask a question in English</div><div class="s">The AI writes the SQL, runs it, draws the chart</div></div></div>
-          <div class="conn"></div>
-          <div class="node"><span class="ic" style="background:var(--mint)">▤</span><div><div class="t">Report &amp; recommendations</div><div class="s">Plus Power BI DAX and page design</div></div></div>
-          <div class="conn"></div>
-          <div class="node gate"><span class="ic" style="background:var(--pink)">n8n</span><div><div class="t">Runs on its own</div><div class="s">Drop a file in, get the report by email</div></div></div>
-        </div>
+        <figure class="shot"><img src="images/ai_agent.jpg" alt="AI Data Analyst Agent web app — answering a question with SQL and a chart"><figcaption>The agent's web app answering a question</figcaption></figure>
       </div>
       <div class="info">
         <span class="tagline">AI agent · Python · n8n</span>
@@ -645,52 +574,6 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(!reduce){setInterval(function(){ri=(ri+1)%roles.length;var w=roles[ri],i=0;rot.textContent='';var t=setInterval(function(){rot.textContent=w.slice(0,++i);if(i>=w.length)clearInterval(t)},45)},2800)}
 
-
-  // real-data charts
-  var D={months:["2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06"],sales:[105805, 97071, 114125, 102150, 107332, 100705, 113256, 108897, 100182, 102915, 104820, 106892, 102580, 95722, 103310, 101288, 112485, 110760, 104881, 105342, 102617, 106696, 114106, 100295, 107843, 64450, 71398, 75205, 75105, 70144],orders:[1507, 1364, 1587, 1466, 1499, 1479, 1530, 1559, 1434, 1499, 1457, 1606, 1511, 1354, 1570, 1512, 1546, 1571, 1529, 1537, 1482, 1530, 1572, 1443, 1497, 926, 1045, 1009, 1084, 991],
-    cat:[["Electronics", 1511165, 0.188], ["Accessories", 482202, 0.405], ["Home Office", 389667, 0.264], ["Wearables", 374534, 0.297], ["Gaming", 173359, 0.22], ["Stationery", 57453, 0.46]],rfm:[["Champions",2580],["Loyal",2446],["At Risk",3272],["Lost",1560]],
-    disc:[["No discount",0.311],["1-10%",0.255],["11-20%",0.171],["21%+",0.011]]};
-  var NS='http://www.w3.org/2000/svg';
-  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e}
-  function svg(w,h){return el('svg',{viewBox:'0 0 '+w+' '+h,role:'img'})}
-  function fmtK(v){return v>=1e6?(v/1e6).toFixed(2)+'M':v>=1e3?Math.round(v/1e3)+'K':String(v)}
-  function lab(m){var p=m.split('-');return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+p[1]-1]+' '+p[0].slice(2)}
-  function barsByMonth(id,vals,color,max,fmt){
-    var W=420,H=170,L=34,B=22,T=8,cw=(W-L-6)/vals.length,s=svg(W,H);
-    [0,.5,1].forEach(function(f){var y=H-B-(H-B-T)*f;s.appendChild(el('line',{x1:L,x2:W-4,y1:y,y2:y,stroke:'rgba(214,214,255,.08)'}));s.appendChild(el('text',{x:L-4,y:y+3,'text-anchor':'end'},fmt(max*f)))});
-    vals.forEach(function(v,i){var h=(H-B-T)*v/max,x=L+i*cw+1.5,late=D.months[i]>='2026-02';
-      var r=el('rect',{x:x,y:H-B-h,width:cw-3,height:h,rx:2,fill:late?'var(--coral)':color});r.appendChild(el('title',{},lab(D.months[i])+': '+v.toLocaleString()));s.appendChild(r);
-      if(i%6===0)s.appendChild(el('text',{x:x+cw/2,y:H-6,'text-anchor':'middle'},lab(D.months[i])))});
-    document.getElementById(id).appendChild(s)}
-  barsByMonth('chSales',D.sales,'var(--sun)',120000,fmtK);
-  (function(){var W=420,H=170,L=34,B=22,T=8,max=1800,s=svg(W,H),n=D.orders.length,dx=(W-L-10)/(n-1),pts=[];
-    [0,.5,1].forEach(function(f){var y=H-B-(H-B-T)*f;s.appendChild(el('line',{x1:L,x2:W-4,y1:y,y2:y,stroke:'rgba(214,214,255,.08)'}));s.appendChild(el('text',{x:L-4,y:y+3,'text-anchor':'end'},String(max*f)))});
-    D.orders.forEach(function(v,i){pts.push((L+i*dx).toFixed(1)+','+(H-B-(H-B-T)*v/max).toFixed(1));if(i%6===0)s.appendChild(el('text',{x:L+i*dx,y:H-6,'text-anchor':'middle'},lab(D.months[i])))});
-    s.appendChild(el('polygon',{points:pts.join(' ')+' '+(L+(n-1)*dx)+','+(H-B)+' '+L+','+(H-B),fill:'rgba(76,201,240,.12)'}));
-    s.appendChild(el('polyline',{points:pts.join(' '),fill:'none',stroke:'var(--sky)','stroke-width':2.5,'stroke-linejoin':'round'}));
-    var i0=D.months.indexOf('2026-02'),x0=L+i0*dx;s.appendChild(el('line',{x1:x0,x2:x0,y1:T,y2:H-B,stroke:'var(--coral)','stroke-dasharray':'4 4'}));
-    s.appendChild(el('text',{x:x0-4,y:T+10,'text-anchor':'end',style:'fill:var(--coral)'},'drop starts'));
-    var last=pts[n-1].split(',');s.appendChild(el('circle',{cx:last[0],cy:last[1],r:4,fill:'var(--sky)'}));
-    document.getElementById('chOrders').appendChild(s)})();
-  function hbars(id,rows,max,color,valFmt,extra){
-    var W=420,rh=26,L=96,H=rows.length*rh+6,s=svg(W,H);
-    rows.forEach(function(r,i){var y=i*rh+4,w=(W-L-140)*r[1]/max;
-      s.appendChild(el('text',{x:L-8,y:y+14,'text-anchor':'end'},r[0]));
-      s.appendChild(el('rect',{x:L,y:y+2,width:Math.max(w,2),height:16,rx:4,fill:typeof color==='function'?color(r):color}));
-      s.appendChild(el('text',{x:L+w+6,y:y+14},valFmt(r)+(extra?extra(r):'')))});
-    document.getElementById(id).appendChild(s)}
-  hbars('chCat',D.cat,1600000,function(r){return r[0]==='Electronics'?'var(--pink)':'var(--violet)'},function(r){return fmtK(r[1])},function(r){return '  · '+Math.round(r[2]*100)+'% margin'});
-  hbars('chRfm',D.rfm,3500,function(r){return {Champions:'var(--mint)',Loyal:'var(--sky)','At Risk':'var(--sun)',Lost:'var(--coral)'}[r[0]]},function(r){return r[1].toLocaleString()});
-  hbars('chDisc',D.disc,0.35,function(r){return r[1]<.05?'var(--coral)':'var(--mint)'},function(r){return Math.round(r[1]*100)+'% margin'});
-  hbars('chOtd',[["Great Lakes",95.4],["Hoosier",93.9],["Motor City",90.2],["Northshore",88.6],["Ohio Valley",85.3],["Rhein",83.6],["Bajio",81.1],["Pacific Rim",57.8]],100,function(r){return r[1]>=95?'var(--mint)':(r[1]>=90?'var(--sun)':'var(--coral)')},function(r){return r[1].toFixed(1)+'%'});
-  hbars('chDefault',[["Unemployed",32],["Student",26],["All customers",12.3]],35,function(r){return r[0]==='All customers'?'var(--dim)':'var(--coral)'},function(r){return r[1]+'% default'});
-
-
-  // dashboard tabs
-  var tabs=[].slice.call(document.querySelectorAll('.dtabs button')),panes=[].slice.call(document.querySelectorAll('.dpane'));
-  tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-selected',x===b)});panes.forEach(function(p){p.hidden=p.dataset.p!==b.dataset.p})})});
-  var autoTab=0,autoT=reduce?null:setInterval(function(){autoTab=(autoTab+1)%tabs.length;tabs[autoTab].click()},3500);
-  document.querySelector('.dtabs').addEventListener('click',function(e){if(e.isTrusted&&autoT){clearInterval(autoT);autoT=null}});
 
   // copy email
   document.getElementById('copyMail').addEventListener('click',function(){
