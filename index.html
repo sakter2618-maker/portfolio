@@ -1,7 +1,7 @@
 <!doctype html><html><head><script>if(location.hostname.indexOf("www.")===0)location.replace("https://salmaakter.me"+location.pathname+location.search+location.hash)</script><link rel="canonical" href="https://salmaakter.me/"><link rel="icon" type="image/png" href="/favicon.png?v=2"><link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2"><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Salma Akter Portfolio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Data Analyst and AI Automation Builder: five live projects in retail, automotive supply chain, banking risk and AI agents, built with Python, SQL and n8n.">
+<meta name="description" content="Data Analyst and AI Automation Builder: six live projects in retail, automotive supply chain, banking risk, healthcare and AI agents, built with Python, SQL and n8n.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -342,10 +342,10 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
 
 <div class="strip">
   <div class="wrap">
-    <div class="stat"><strong>5</strong><span>end-to-end projects shipped</span></div>
-    <div class="stat"><strong>3</strong><span>live interactive dashboards</span></div>
+    <div class="stat"><strong>6</strong><span>end-to-end projects shipped</span></div>
+    <div class="stat"><strong>4</strong><span>live interactive dashboards</span></div>
     <div class="stat"><strong>2</strong><span>AI automation agents</span></div>
-    <div class="stat"><strong>200K+</strong><span>rows cleaned &amp; analysed</span></div>
+    <div class="stat"><strong>280K+</strong><span>rows cleaned &amp; analysed</span></div>
   </div>
 </div>
 
@@ -382,7 +382,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
 
 <section class="block" id="projects">
   <div class="wrap">
-    <div class="head"><div><div class="eyebrow">Selected work</div><h2>Projects</h2></div><p>Five end-to-end projects: three live dashboards and two AI agents, each one you can open and try.</p></div>
+    <div class="head"><div><div class="eyebrow">Selected work</div><h2>Projects</h2></div><p>Six end-to-end projects: four live dashboards and two AI agents, each one you can open and try.</p></div>
 
     <!-- Retail -->
     <article class="proj" style="--c:#22D3EE;--tint:rgba(34,211,238,.2)">
@@ -496,8 +496,37 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
       </div>
     </article>
 
+    <!-- Healthcare -->
+    <article class="proj" style="--c:#3B82F6;--on:#fff;--tint:rgba(37,99,235,.26)">
+      <div class="vis">
+        <figure class="shot"><img src="images/healthcare.jpg" alt="Healthcare Patient Analytics dashboard — executive overview"><figcaption>Live dashboard · Executive Overview</figcaption></figure>
+      </div>
+      <div class="info">
+        <span class="tagline">Healthcare · Hospital operations</span>
+        <h3>Healthcare Patient Analytics</h3>
+        <p class="sum">Admissions, hospital performance, length of stay, treatment cost, 30-day readmissions and appointment no-shows across 5 hospitals, on synthetic, de-identified patient data.</p>
+        <h5>What I found</h5>
+        <ul class="pts">
+          <li>One hospital readmits 20.8% of patients vs 13.5% at the best, and keeps them 1.1 days longer</li>
+          <li>Patients 60+ use 29.7% of all services and are readmitted 21.8% of the time</li>
+          <li>No-shows rise from 5.3% (same-day booking) to 21% when booked 30+ days ahead; SMS reminders cut them by 6 points</li>
+        </ul>
+        <h5>What I built</h5>
+        <ul class="pts">
+          <li>Python cleaning of a messy hospital export (22 logged fixes) and a PostgreSQL star schema with 18 queries</li>
+          <li>Readmissions derived with SQL window functions, matching Python exactly</li>
+          <li>An Excel cleaning workbook, a Power BI kit (DAX + theme) and a 7-page live dashboard</li>
+        </ul>
+        <h5>Tools</h5>
+        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">PostgreSQL</span><span class="chip">Excel</span><span class="chip">Power BI</span><span class="chip">Streamlit</span></div>
+        <div class="links">
+          <a class="btn btn-c" href="/healthcare/" target="_blank" rel="noopener">View dashboard &rarr;</a>
+        </div>
+      </div>
+    </article>
+
     <!-- AI Data Analyst Agent -->
-    <article class="proj" style="--c:#8B5CF6;--on:#fff;--tint:rgba(139,92,246,.24)">
+    <article class="proj flip" style="--c:#8B5CF6;--on:#fff;--tint:rgba(139,92,246,.24)">
       <div class="vis">
         <figure class="shot"><img src="images/ai_agent.jpg" alt="AI Data Analyst Agent web app — answering a question with SQL and a chart"><figcaption>The agent's web app answering a question</figcaption></figure>
       </div>
