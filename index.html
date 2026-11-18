@@ -1,7 +1,7 @@
 <!doctype html><html><head><script>if(location.hostname.indexOf("www.")===0)location.replace("https://salmaakter.me"+location.pathname+location.search+location.hash)</script><link rel="canonical" href="https://salmaakter.me/"><link rel="icon" type="image/png" href="/favicon.png?v=2"><link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2"><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Salma Akter Portfolio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Data Analyst and AI Automation Builder: six live projects in retail, automotive supply chain, banking risk, healthcare and AI agents, built with Python, SQL and n8n.">
+<meta name="description" content="Data Analyst and AI Automation Builder: seven live projects in retail, automotive supply chain, banking risk, healthcare, order management and AI agents, built with Python, SQL and n8n.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -243,7 +243,7 @@ section.block{padding-block:96px 0}
 .note{margin-top:18px;font-size:.85rem;color:var(--dim)}
 
 /* SKILLS */
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .sk{padding:24px;border-radius:20px;background:var(--ink-2);border:1px solid var(--line);position:relative;overflow:hidden}
 .sk::before{content:"";position:absolute;inset:auto -40px -60px auto;width:160px;height:160px;border-radius:50%;background:var(--c);opacity:.12;filter:blur(10px)}
 .sk h3{font-size:1.3rem;display:flex;align-items:center;gap:10px}
@@ -290,7 +290,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
 <section class="hero" id="home">
   <div class="wrap">
     <div class="hero-text">
-      <span class="status"><b></b>Open to Data Analyst &amp; Automation roles</span>
+      <span class="status"><b></b>Open to Data Analyst, Product &amp; Automation roles</span>
       <h1>Hi, I'm <span class="name">Salma Akter</span>.<br>I turn raw data into decisions.</h1>
       <div class="role">I build <span id="rot">Python dashboards</span></div>
       <p class="lead">I clean messy data, model it in SQL, and tell its story in live dashboards: retail sales, automotive supply chains, banking and insurance risk. I also build AI agents that clean data, audit websites and write the report for you.</p>
@@ -342,10 +342,10 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
 
 <div class="strip">
   <div class="wrap">
-    <div class="stat"><strong>6</strong><span>end-to-end projects shipped</span></div>
-    <div class="stat"><strong>4</strong><span>live interactive dashboards</span></div>
+    <div class="stat"><strong>7</strong><span>end-to-end projects shipped</span></div>
+    <div class="stat"><strong>5</strong><span>live interactive dashboards</span></div>
     <div class="stat"><strong>2</strong><span>AI automation agents</span></div>
-    <div class="stat"><strong>280K+</strong><span>rows cleaned &amp; analysed</span></div>
+    <div class="stat"><strong>340K+</strong><span>rows cleaned &amp; analysed</span></div>
   </div>
 </div>
 
@@ -525,8 +525,38 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
       </div>
     </article>
 
+    <!-- Order Management Product Analytics -->
+    <article class="proj flip" style="--c:#6C5CE7;--on:#fff;--tint:rgba(108,92,231,.26)">
+      <div class="vis">
+        <figure class="shot"><img src="images/oms.jpg" alt="Order Management Product Analytics dashboard — executive overview"><figcaption>Live dashboard · Executive Overview</figcaption></figure>
+      </div>
+      <div class="info">
+        <span class="tagline">Product management · E-commerce operations</span>
+        <h3>Order Management Product Analytics</h3>
+        <p class="sum">A product manager&rsquo;s view of an e-commerce order management system: where orders go wrong between checkout and the customer&rsquo;s door, what each problem costs, which fix to build first, and an A/B test to prove it. Built on 51,000 synthetic orders for a fictional auto-parts store.</p>
+        <h5>What I found</h5>
+        <ul class="pts">
+          <li>Orders shipped from dealer stock arrive on time only 62% of the time, and 8.7% go out of stock after checkout because dealer inventory syncs only once a night</li>
+          <li>&ldquo;Doesn&rsquo;t fit my vehicle&rdquo; causes 38% of returns, about $149K a year</li>
+          <li>Half of all support contacts are &ldquo;where is my order?&rdquo;; late orders contact support 3.6&times; as often</li>
+          <li>A/B test: real-time inventory cut out-of-stock orders from 4.2% to 1.3% (&minus;68%, p &lt; 0.001), so it was rolled out</li>
+        </ul>
+        <h5>What I built</h5>
+        <ul class="pts">
+          <li>A RICE-prioritized backlog with reach measured from the data, and a Now / Next / Later roadmap</li>
+          <li>A PRD and user stories with acceptance criteria for the #1 feature, a vehicle fitment check</li>
+          <li>A North Star metric tree, 13 SQL queries and an 8-page live dashboard</li>
+        </ul>
+        <h5>Tools</h5>
+        <div class="chips"><span class="chip">Product strategy</span><span class="chip">RICE</span><span class="chip">PRD &amp; user stories</span><span class="chip">A/B testing</span><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Streamlit</span></div>
+        <div class="links">
+          <a class="btn btn-c" href="/oms/" target="_blank" rel="noopener">View dashboard &rarr;</a>
+        </div>
+      </div>
+    </article>
+
     <!-- AI Data Analyst Agent -->
-    <article class="proj flip" style="--c:#8B5CF6;--on:#fff;--tint:rgba(139,92,246,.24)">
+    <article class="proj" style="--c:#8B5CF6;--on:#fff;--tint:rgba(139,92,246,.24)">
       <div class="vis">
         <figure class="shot"><img src="images/ai_agent.jpg" alt="AI Data Analyst Agent web app — answering a question with SQL and a chart"><figcaption>The agent's web app answering a question</figcaption></figure>
       </div>
@@ -557,6 +587,7 @@ footer{padding-block:40px;color:var(--dim);font-size:.85rem;display:flex;flex-wr
       <div class="sk" style="--c:var(--sun)"><h3><i></i>Analysis &amp; BI</h3><div class="chips"><span class="chip">Excel</span><span class="chip">Power BI &amp; DAX</span><span class="chip">Data cleaning</span><span class="chip">KPI design</span><span class="chip">Statistics</span><span class="chip">SPC charts</span><span class="chip">Streamlit</span><span class="chip">Plotly</span></div></div>
       <div class="sk" style="--c:var(--violet)"><h3><i></i>SQL, Python &amp; ML</h3><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Joins, CTEs &amp; window functions</span><span class="chip">Star schema</span><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">scikit-learn</span><span class="chip">K-Means</span><span class="chip">Logistic regression</span><span class="chip">Anomaly detection</span></div></div>
       <div class="sk" style="--c:var(--mint)"><h3><i></i>AI &amp; Automation</h3><div class="chips"><span class="chip">n8n</span><span class="chip">AI agents</span><span class="chip">Gemini &amp; Claude APIs</span><span class="chip">Prompt engineering</span><span class="chip">REST APIs</span><span class="chip">Google APIs</span><span class="chip">GitHub Actions</span><span class="chip">VPS hosting</span></div></div>
+      <div class="sk" style="--c:var(--pink)"><h3><i></i>Product</h3><div class="chips"><span class="chip">Product strategy</span><span class="chip">Roadmaps</span><span class="chip">RICE prioritization</span><span class="chip">PRDs</span><span class="chip">User stories &amp; acceptance criteria</span><span class="chip">A/B testing</span><span class="chip">North Star &amp; KPI trees</span><span class="chip">Opportunity sizing</span></div></div>
     </div>
   </div>
 </section>
